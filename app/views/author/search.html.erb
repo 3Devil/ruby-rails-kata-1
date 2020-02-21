@@ -1,0 +1,25 @@
+<h1>Article Search by Author Email</h1>
+<%= form_tag author_search_path do %>
+  <%= search_field_tag :email %>
+  <%= submit_tag %>
+<%end %>
+
+<h1>Articles Result</h1>
+<table>
+  <tr>
+    <th>Type</th>
+    <th>Title</th>
+    <th>ISBN</th>
+    <th>Authors</th>
+  </tr>
+  <% @articles.each do |article| %>
+    <tr>
+      <td><%= article.type %></td>
+      <td><%= article.title %></td>
+      <td><%= article.isbn %></td>
+      <td><%= article.authors.map(&:email).join(', ') %></td>
+    </tr>
+  <% end %>
+</table>
+
+

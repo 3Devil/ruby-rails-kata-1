@@ -1,0 +1,17 @@
+<h1>Articles</h1>
+<table>
+  <tr>
+    <th>Type</th>
+    <th>Title</th>
+    <th>ISBN</th>
+    <th>Authors</th>
+  </tr>
+  <% @articles.each do |article| %>
+  <tr>
+    <td><%= article.type %></td>
+    <td><%= article.title %></td>
+    <td><%= article.isbn %></td>
+    <td><%= article.authors.map(&:email).join(', ') %></td>
+  </tr>
+  <% end %>
+</table>

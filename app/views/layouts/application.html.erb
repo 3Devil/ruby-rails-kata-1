@@ -12,4 +12,12 @@
   <body>
     <%= yield %>
   </body>
+
+  <footer>
+    <p>
+      <%= link_to('List', article_list_path) %> |
+      <%= link_to('Find by ISBN', article_search_path) %> |
+      <%= link_to('Find by Author Email', author_search_path) %>
+    </p>
+  </footer>
 </html>

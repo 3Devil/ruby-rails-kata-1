@@ -1,3 +1,9 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root 'article#list'
+
+  get 'author/search'
+  post 'author/search'
+  get 'article/list'
+  get 'article/search'
+  post 'article/search'
 end
